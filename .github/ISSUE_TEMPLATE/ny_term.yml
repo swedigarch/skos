@@ -38,7 +38,7 @@ body:
       label: "Behov"
       description: "Hur stort är behovet för termen?"
     validations:
-      required: true
+      required: false
 
   - type: textarea
     id: potentiella_problem
@@ -46,7 +46,7 @@ body:
       label: "Potentiella problem"
       description: "Kan den nya termen potentiellt orsaka något problem? Finns det olika åsikter om definition av termen?"
     validations:
-      required: true
+      required: false
 
   - type: markdown
     attributes:
