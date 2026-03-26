@@ -1,49 +1,27 @@
+
 name: 🐛 Bug Report
-description: Rapportera ett reproducerbart bug
+description: Rapportera fel i kodlistorn
 title: "[Bug]: "
 labels: ["bug"]
 body:
+  - type: dropdown
+    id: kodlist
+    attributes:
+      label: "Gäller kodlista:"
+      options:
+        - arkeologiskt objekt
+        - naturligt objekt
+        - stratigrafisk enhet
+        - undersökningsenhet
+      multiple: false
+    validations:
+      required: true
+
   - type: textarea
     id: description
     attributes:
-      label: Beskrivning av buggen
+      label: Beskrivning av felet
       description: Förklara felet tydligt och detaljerat.
-      placeholder: T.ex. "När jag klickar på X händer Y"
+      placeholder: T.ex. "hirarkierna är fel.."
     validations:
       required: true
-
-  - type: textarea
-    id: reproduce
-    attributes:
-      label: Steg för att återskapa
-      description: Lista steg som behövs för att återskapa felet.
-      value: |
-        1.
-        2.
-        3.
-    validations:
-      required: true
-
-  - type: textarea
-    id: expected
-    attributes:
-      label: Förväntat beteende
-      description: Vad borde ha hänt?
-    validations:
-      required: true
-
-  - type: input
-    id: environment
-    attributes:
-      label: Miljö
-      description: OS, webbläsare, version, etc.
-      placeholder: "Ex: Windows 11, Chrome 118, app v2.3.4"
-
-  - type: checkboxes
-    id: agreement
-    attributes:
-      label: Checklista
-      options:
-        - label: Jag har sökt efter befintliga buggar
-          required: true
-        - label: Jag har bifogat relevant logg eller skärmdump
