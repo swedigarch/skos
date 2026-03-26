@@ -2,7 +2,7 @@
 name: 🐛 Bug Report
 description: Rapportera fel i kodlistorn
 title: "[Bug]: "
-labels: ["bug"]
+labels: ["Fel i kodlista"]
 body:
   - type: dropdown
     id: kodlist
