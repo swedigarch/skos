@@ -1,0 +1,124 @@
+name: "🐛Ny term"
+description: "Ny term"
+title: "[Ny term]: "
+labels: ["Ny term"]
+
+body:
+  - type: dropdown
+    id: kodlist
+    attributes:
+      label: "Gäller kodlista:"
+      options:
+        - arkeologiskt objekt
+        - naturligt objekt
+        - stratigrafisk enhet
+        - undersökningsenhet
+      multiple: false
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: |
+        **Obs:** Glöm ej att skriva namnet på termen i den skapade Issuen.
+        ---
+
+  - type: textarea
+    id: motivering
+    attributes:
+      label: "Motivering"
+      description: "Varför behövs termen?"
+    validations:
+      required: true
+
+  - type: textarea
+    id: behov
+    attributes:
+      label: "Behov"
+      description: "Hur stort är behovet för termen?"
+    validations:
+      required: true
+
+  - type: textarea
+    id: potentiella_problem
+    attributes:
+      label: "Potentiella problem"
+      description: "Kan den nya termen potentiellt orsaka något problem? Finns det olika åsikter om definition av termen?"
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: |
+        #### Föreslagna ändringar av term  
+        *(Ta endast med de attribut där ändring föreslås)*
+
+  - type: input
+    id: namn
+    attributes:
+      label: "Namn (skos:prefLabel (sv)):"
+    validations:
+      required: false
+
+  - type: input
+    id: bredare_term
+    attributes:
+      label: "Bredare term (skos:broader):"
+    validations:
+      required: false
+
+  - type: textarea
+    id: def
+    attributes:
+      label: "Definition (skos:definition):"
+    validations:
+      required: false
+
+  - type: input
+    id: kommentar
+    attributes:
+      label: "Kommentar (skos:scopeNote):"
+    validations:
+      required: false
+
+  - type: input
+    id: alt_ett
+    attributes:
+      label: "Alternativ etikett (skos:altLabel (sv)):"
+    validations:
+      required: false
+
+  - type: input
+    id: eg_ett
+    attributes:
+      label: "Engelsk etikett (skos:prefLabel (en)):"
+    validations:
+      required: false
+
+  - type: input
+    id: exakt
+    attributes:
+      label: "Exakt matchning externt vokabulär (skos:exactMatch):"
+    validations:
+      required: false
+
+  - type: input
+    id: nara
+    attributes:
+      label: "Nära matchning externt vokabulär (skos:closeMatch):"
+    validations:
+      required: false
+
+  - type: input
+    id: slakt
+    attributes:
+      label: "Besläktad term i det interna vokabuläret (skos:related):"
+    validations:
+      required: false
+
+  - type: textarea
+    id: ref
+    attributes:
+      label: "Övrig referens, t.ex. litteratur (dct:source):"
+    validations:
+      required: false

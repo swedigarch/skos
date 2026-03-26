@@ -1,0 +1,19 @@
+blank_issues_enabled: true
+
+issue_templates:
+  - name: "🐛 Ändring"
+    description: "Ändring av term"
+    labels: ["andring"]
+    body: "./ISSUE_TEMPLATE/andring.yml"
+
+  - name: "✨ Ny term"
+    description: "Rapportera ett bug i systemet"
+    title: "[Ny]: "
+    labels: ["ny"]
+    body: "./ISSUE_TEMPLATE/ny_term.yml"
+
+  - name: "✨ Feature Request"
+    description: "Föreslå en ny funktion eller förbättring"
+    title: "[Feature]: "
+    labels: ["enhancement"]
+    body: "./ISSUE_TEMPLATE/feature_request.md"
